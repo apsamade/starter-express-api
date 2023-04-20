@@ -114,12 +114,12 @@ aside{
     .croix span:nth-child(1){
         transform: rotateZ(45deg);
         position: absolute;
-        top: 23px;
+        top: 20px;
         transition: 0.3s;
     }
     .croix span:nth-child(2){
         position: absolute;
-        bottom: 24px;
+        bottom: 20px;
         transition: 0.3s;
         transform: rotateZ(-45deg);
 
