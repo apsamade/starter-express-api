@@ -1,9 +1,30 @@
 /* ///////////////////////////////////////////// Nav ///////////////////////////////////////////// */
+.sticky {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+    background-color: rgb(29, 29, 29);
+    z-index: 1000;
+
+    animation: fadeIn 0.5s 0s ease forwards;
+}
+.remonte{
+    animation: disparition 0.5s 0s ease forwards;
+}
+.nav.sticky-hidden {
+    opacity: 0;
+    visibility: hidden;
+  }
+/* /////////////////////////////////////////////////////// */
 nav{
+    width: 100%;
     display: flex;
     align-items: center;
     justify-content: space-between;
     font-family: 'Oswald', sans-serif;
+    position: absolute;
+    top: 0;
 }
 nav img{
     width: 100px;
@@ -180,3 +201,23 @@ aside{
         font-size: 21px;
     }
 }
+@keyframes disparition {
+    0% {
+      opacity: 1;
+      transform: translateY(0%);
+    }
+    100% {
+      opacity: 0;
+      transform: translateY(-100%);
+    }
+  }
+  @keyframes fadeIn {
+    0% {
+      opacity: 0;
+      transform: translateY(-100%);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0%);
+    }
+  }
