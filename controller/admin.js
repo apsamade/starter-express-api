@@ -20,7 +20,7 @@ exports.postHome = (req, res, next)=>{
       const mailOptions = {
         from: req.body.email,
         to: 'bouderga.abdessamade@gmail.com',
-        subject: `Message de ${req.body.name}: ${req.body.message}`,
+        subject: `Message de ${req.body.name}: ${req.body.email}`,
         text: req.body.message
       };
     
@@ -29,7 +29,7 @@ exports.postHome = (req, res, next)=>{
           console.log(error);
           res.send('Erreur lors de l\'envoi du message');
         } else {
-          console.log('Message envoyé: ' + info.response + ' contenue du message : ' + req.body.email);
+          console.log('Message envoyé: ' + info.response + ' contenue du message : ' + req.body.message + 'email : ' + req.body.email);
           res.redirect('/');        }
       });
 }
