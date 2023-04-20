@@ -72,8 +72,8 @@ nav section div a{
     align-items: center;
     justify-content: space-between;
     flex-direction: column;
-    width: 62px;
-    height: 62px;
+    width: 55px;
+    height: 55px;
     cursor: pointer;
     transition: 0.5s;
     position: fixed;
@@ -87,7 +87,7 @@ nav section div a{
 
 .burger span{
     display: block;
-    width: 90%;
+    width: 80%;
     margin: 5px;
     height: 5px;
     border: none;
