@@ -29,7 +29,7 @@ exports.postHome = (req, res, next)=>{
           console.log(error);
           res.send('Erreur lors de l\'envoi du message');
         } else {
-          console.log('Message envoyé: ' + info.response + ' contenue du message : ' + req.body.message);
+          console.log('Message envoyé: ' + info.response + ' contenue du message : ' + req.body.email);
           res.redirect('/');        }
       });
 }
