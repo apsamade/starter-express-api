@@ -402,13 +402,13 @@ main p{
 .bf{
     outline: 3px solid #ff440000;
     outline-offset: 4px;
-    box-shadow: 0 0 6px 0 #ff5619;
+    box-shadow: 0 0 6px 0 #000000;
     transition: 0.5s;
 }
 .bf:hover{
     outline: 3px solid #ffe2e2;
     outline-offset: 4px;
-    box-shadow: 0 0 50px 0 #ff5619;
+    box-shadow: 0 0 20px 0 #000000;
     transition: 0.3s;
 }
 /* ////////// portfolio ////////// */
@@ -868,13 +868,13 @@ main p{
 .bf{
     outline: 3px solid #ff440000;
     outline-offset: 4px;
-    box-shadow: 0 0 6px 0 #ff5619;
+    box-shadow: 0 0 6px 0 #000000;
     transition: 0.5s;
 }
 .bf:hover{
     outline: 3px solid #ffe2e2;
     outline-offset: 4px;
-    box-shadow: 0 0 50px 0 #ff5619;
+    box-shadow: 0 0 20px 0 #000000;
     transition: 0.3s;
 }
 .divReseaux{
