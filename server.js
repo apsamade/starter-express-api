@@ -14,8 +14,8 @@ const userRoutes = require('./routes/user')
 const adminRoutes = require('./routes/admin')
 const errController = require('./controller/middleware/error404')
 
-const port = process.env.PORT;
-const uri = process.env.URI;
+const PORT = process.env.PORT;
+const URI = process.env.URI;
 
 const app = express()
 const csp = {
@@ -26,7 +26,17 @@ const csp = {
         connectSrc: ["'self'", "https://region1.google-analytics.com/", "https://pagead2.googlesyndication.com/"],
         imgSrc: ["'self'", "https://i.ibb.co/", "https://www.google.com/", "https://www.google.fr/", "https://googleads.g.doubleclick.net/"], // Add "https://i.ibb.co/" to allow loading images from this domain
         // Add other necessary directives as per your application's requirements
-},
+    },
+}
+
+const connectDB = async () => {
+    try {
+        const conn = await mongoose.connect(process.env.URI);
+        console.log(`MongoDB Connected: ${conn.connection.host}`);
+    } catch (error) {
+        console.log(error);
+        process.exit(1);
+    }
 }
 
 app.set('view engine', 'ejs')
@@ -38,10 +48,10 @@ app.use(express.raw({ type: 'application/json' }));
 app.use(cookieParser())
 
 app.use(session({
-        secret: "jeveuxpasmourir",
-        resave: false,
-        saveUninitialized: false,
-        cookie: { secure: false }
+    secret: "jeveuxpasmourir",
+    resave: false,
+    saveUninitialized: false,
+    cookie: { secure: false }
 }))
 
 app.use(express.static(path.dirname('public')))
@@ -53,11 +63,9 @@ app.use(userRoutes)
 app.use(adminRoutes)
 app.use(errController.get404)
 
-mongoose.connect(uri).then(()=>{
-    console.log(`connexion à la bdd établie avec succès`)
-        app.listen(port, ()=>{
-            console.log(`running on port ${port}`)
-        })
-    }).catch((error)=>{
-        console.log('Erreur lors de la connexion : ', error)
+//Connect to the database before listening
+connectDB().then(() => {
+    app.listen(PORT, () => {
+        console.log("listening for requests");
     })
+})
