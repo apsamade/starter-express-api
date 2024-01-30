@@ -14,7 +14,7 @@ const userRoutes = require('./routes/user')
 const adminRoutes = require('./routes/admin')
 const errController = require('./controller/middleware/error404')
 
-const port = process.env.PORT || 3030;
+const port = process.env.PORT;
 const uri = process.env.URI;
 
 const app = express()
