@@ -1,549 +1,133 @@
 <!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="Menu d'accueil de bouderga abdel-samade le développeur web">
-    <meta name="description" content="Développeur web">
-    <title>Portfolio - Abdel-samade</title>
-    <link rel="stylesheet" href="../public/css/index.css" />
-    <link rel="stylesheet" href="../public/css/formulaire.css" />
-    <link rel="stylesheet" href="../public/css/nav.css" />
-    <link rel="icon" href="../public/img/AB.png" />
-    <!-- Google tag (gtag.js) -->
-      <script async src="https://www.googletagmanager.com/gtag/js?id=G-L489ZS71P9"></script>
-      <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
-        gtag('js', new Date());
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio Développeur Web Bouderga</title>
+    <meta name="description" content="Développeur web spécialisé en Node.js et MongoDB. Découvrez mes projets innovants et renforcez votre présence digitale avec des solutions sur mesure.">
+    <meta name="keywords" content="développeur web, Node.js, MongoDB, portfolio, projets innovants">
+    <meta name="author" content="Abdel-Samade Bouderga">
+    <link rel="stylesheet" href="/public/css/style.css">
+    <link rel="stylesheet" href="/public/css/home.css">
+    <link rel="shortcut icon" href="/public/img/logo/solo_ab_logo.png" type="image/x-icon">
 
-        gtag('config', 'G-L489ZS71P9');
-      </script>
-    <!-- Google tag (gtag.js) -->
-  </head>
-  <body>
-    <nav class="nav">
-      <a href="/"><img src="../public/img/AB.png" alt="Logo Abdel-samade" /></a>
-      <section>
-        <a href="#bout">About me</a>
-        <a href="#skills">Skills</a>
-        <a href="#portfolio">Portfolio</a>
-        <a href="#contact">Contact</a>
-        <div id="reseau" style="color: white">
-          <span style="font-size: 40px; position: relative; bottom: 4px"
-            >|</span
-          >
-          <a
-            target="_blank"
-            href="https://www.linkedin.com/in/abdel-samade-bouderga-b814a2248/"
-            ><i class="fa-brands fa-linkedin"></i
-          ></a>
-          <a target="_blank" href="https://github.com/apsamade"
-            ><i class="fa-brands fa-github"></i
-          ></a>
-          <a target="_blank" href="https://www.instagram.com/apsamade78/"
-            ><i class="fa-brands fa-instagram"></i
-          ></a>
-        </div>
-      </section>
-    </nav>
-    <div class="burger">
-      <span></span>
-      <span></span>
-      <span></span>
-    </div>
-    <aside>
-      <a href="/"><img src="../public/img/AB.png" alt="Logo Abdel-samade" /></a>
-      <section>
-        <a href="#bout">About me</a>
-        <a href="#skills">Skills</a>
-        <a href="#portfolio">Portfolio</a>
-        <a href="#contact">Contact</a>
-        <div id="reseau" style="color: white">
-          <a
-            target="_blank"
-            href="https://www.linkedin.com/in/abdel-samade-bouderga-b814a2248/"
-            ><i class="fa-brands fa-linkedin"></i
-          ></a>
-          <a target="_blank" href="https://github.com/apsamade"
-            ><i class="fa-brands fa-github"></i
-          ></a>
-          <a target="_blank" href="https://www.instagram.com/apsamade78/"
-            ><i class="fa-brands fa-instagram"></i
-          ></a>
-        </div>
-      </section>
-    </aside>
-    <header class="header">
-      <section>
-        <h1>
-          Bouderga Abdel-samade
-          <span
-            style="
-              background-color: #843518;
-              border-radius: 50%;
-              width: 15px;
-              height: 15px;
-              display: inline-table;
-            "
-          ></span>
-        </h1>
-        <hr />
-        <h2>Développeur web</h2>
-        <div>
-          <a
-            target="_blank"
-            href="https://www.linkedin.com/in/abdel-samade-bouderga-b814a2248/"
-            ><i class="fa-brands fa-linkedin"></i
-          ></a>
-          <a target="_blank" href="https://www.instagram.com/apsamade78/"
-            ><i class="fa-brands fa-instagram"></i
-          ></a>
-          <a target="_blank" href="https://github.com/apsamade"
-            ><i class="fa-brands fa-github"></i
-          ></a>
-        </div>
-        <a
-          target="_blank"
-          class="downlo"
-          href="../public/img/CV-abdel-samade-bouderga.pdf"
-          >téléchargez mon CV</a
-        >
-      </section>
-      <a href="#bout" class="ff"
-        ><img id="down" src="../public/img/fleche.png" alt="fleche du bas"
-      /></a>
-      <img id="pro" src="../public/img/headerPro.png" alt="photo de profil" />
+    <meta property="og:title" content="Portfolio développeur web Bouderga Abdel-samade">
+    <meta property="og:description" content="Développeur web spécialisé en Node.js et MongoDB. Explorez mes projets innovants et renforcez votre présence digitale avec des solutions sur mesure.">
+    <meta property="og:image" content="/public/img/elements/photo_presentation_3.jpg">
+
+    <!-- Liens vers les profils sur les réseaux sociaux -->
+    <meta property="og:linkedin" content="https://www.linkedin.com/in/abdel-samade-bouderga-b814a2248/">
+    <meta property="og:github" content="https://github.com/apsamade">
+    <meta property="og:instagram" content="https://www.instagram.com/apsamade78/">
+
+</head>
+<body>
+    <% if(user){ %>
+        <% if(user.admin){ %>
+            <%- include('partials/navAdmin') %>
+        <% }else{ %>
+            <%- include('partials/navUser') %>
+        <% } %>
+    <% }else{ %>
+        <%- include('partials/nav') %>
+    <% } %>
+    
+    <header>
+        <h1>Portfolio Bouderga Abdel-samade</h1>
+        <p>Développeur web spécialisé en Node.js et MongoDB, façonnant des expériences en ligne uniques. Explorez mon portfolio pour découvrir mes projets innovants.</p>
+        <a href="/blog">Mon Blog</a>
+        <img src="/public/img/elements/pc_portable.png" alt="Pc portable">
     </header>
-    <article id="bout">
-      <section>
-        <img src="../public/img/imgAbout.png" alt="image de abdel-samade" />
+
+    <section class="stacks">
         <div>
-          <h2>Qui suis-je ?</h2>
-          <h3>Développeur Web fullStack</h3>
-          <h4>Je suis Abdel-samade Bouderga, un passioné de codage</h4>
-          <p class="bl">
-            Bonjour, je suis Abdel-Samade, un développeur web FullStack
-            ambitieux de 21 ans. Mon expérience en codage s'étend sur 6 mois et
-            j'ai acquis des compétences solides en Node.js avec ExpressJS et en
-            front-end avec HTML et CSS. Ma passion pour le codage est
-            indéniable, on peut dire que j'aime manger des cartes graphiques et
-            des barrettes de RAM matin midi et soir, c'est pourquoi j'ai décidé
-            de poursuivre une carrière en tant que développeur web.
-          </p>
-          <br />
-          <div class="iAm">
-            <div
-              style="
-                display: flex;
-                align-items: center;
-                justify-content: space-between;
-              "
-            >
-              <div class="iAm-contain">
-                <p class="bl">
-                  <span style="margin-bottom: 20px; color: white">Nom :</span>
-                  Bouderga Abdel-Samade
-                </p>
-                <p class="bl"><span style="color: white">Âge :</span> 21 ans</p>
-              </div>
-              <div class="iAm-contain">
-                <p class="bl">
-                  <span style="margin-bottom: 20px; color: white"
-                    >Location :</span
-                  >
-                  Paris Île-de-France
-                </p>
-                <p class="bl">
-                  <span style="color: white">Email :</span>
-                  bouderga.abdessamade@gmail.com
-                </p>
-              </div>
-            </div>
-            <a
-              target="_blank"
-              class="downlo"
-              href="../public/img/CV-abdel-samade-bouderga.pdf"
-              >téléchargez mon CV</a
-            >
-          </div>
+            <img src="/public/img/elements/html_logo.png" alt="Html">
+            <h4>Html</h4>
         </div>
-      </section>
-    </article>
-    <main id="skills">
-      <!-- <h3>Skills</h3> -->
-      <h2>
-        <!-- <img
-          style="width: 120px;"
-          src="../public/img/skills.png"
-          alt=""
-        /> -->
-        Skills
-      </h2>
-      <hr />
-      <section class="section-main-1">
-        <div class="bff bf">
-          <h3>Back-End</h3>
-          <div
-            style="
-              display: flex;
-              align-items: center;
-              justify-content: space-between;
-              margin: 30px 15px;
-            "
-          >
-            <div class="skill1">
-              <span
-                style="
-                  display: block;
-                  width: 65%;
-                  height: 30px;
-                  background-color: rgb(35, 168, 35);
-                  padding: 5px;
-                "
-                >65%</span
-              >
-            </div>
-            <h4>NodeJs</h4>
-          </div>
-
-          <div
-            style="
-              display: flex;
-              align-items: center;
-              justify-content: space-between;
-              margin: 30px 15px;
-            "
-          >
-            <div class="skill1">
-              <span
-                style="
-                  display: block;
-                  width: 70%;
-                  height: 30px;
-                  background-color: rgb(236, 233, 33);
-                  padding: 5px;
-                  color: black;
-                "
-                >70%</span
-              >
-            </div>
-            <h4>ExpressJS</h4>
-          </div>
-
-          <div
-            style="
-              display: flex;
-              align-items: center;
-              justify-content: space-between;
-              margin: 30px 15px;
-            "
-          >
-            <div class="skill1">
-              <span
-                style="
-                  display: block;
-                  width: 60%;
-                  height: 30px;
-                  background-color: rgb(28, 56, 184);
-                  padding: 5px;
-                "
-                >60%</span
-              >
-            </div>
-            <h4>PHP</h4>
-          </div>
+        <div>
+            <img src="/public/img/elements/css_logo.png" alt="Css">
+            <h4>Css</h4>
         </div>
-
-        <div class="bff bf">
-          <h3>Front-End</h3>
-          <div
-            style="
-              display: flex;
-              align-items: center;
-              justify-content: space-between;
-              margin: 30px 15px;
-            "
-          >
-            <div class="skill1">
-              <span
-                style="
-                  display: block;
-                  width: 80%;
-                  height: 30px;
-                  background-color: rgb(168, 39, 35);
-                  padding: 5px;
-                "
-                >80%</span
-              >
-            </div>
-            <h4>HTML</h4>
-          </div>
-
-          <div
-            style="
-              display: flex;
-              align-items: center;
-              justify-content: space-between;
-              margin: 30px 15px;
-            "
-          >
-            <div class="skill1">
-              <span
-                style="
-                  display: block;
-                  width: 80%;
-                  height: 30px;
-                  background-color: rgb(35, 108, 168);
-                  padding: 5px;
-                "
-                >80%</span
-              >
-            </div>
-            <h4>CSS</h4>
-          </div>
-
-          <div
-            style="
-              display: flex;
-              align-items: center;
-              justify-content: space-between;
-              margin: 30px 15px;
-            "
-          >
-            <div class="skill1">
-              <span
-                style="
-                  display: block;
-                  width: 70%;
-                  height: 30px;
-                  background-color: rgb(202, 243, 22);
-                  padding: 5px;
-                "
-                >70%</span
-              >
-            </div>
-            <h4>JavaScript</h4>
-          </div>
+        <div>
+            <img src="/public/img/elements/js_logo.png" alt="JavaScript">
+            <h4>Js</h4>
         </div>
-
-        <div class="bff bf">
-          <h3>FrameWork</h3>
-
-          <div
-            style="
-              display: flex;
-              align-items: center;
-              justify-content: space-between;
-              margin: 30px 15px;
-            "
-          >
-            <div class="skill1">
-              <span
-                style="
-                  display: block;
-                  width: 68%;
-                  height: 30px;
-                  background-color: rgb(35, 104, 168);
-                  padding: 5px;
-                "
-                >68%</span
-              >
-            </div>
-            <h4>Symfony</h4>
-          </div>
-
-          <div
-            style="
-              display: flex;
-              align-items: center;
-              justify-content: space-between;
-              margin: 30px 15px;
-            "
-          >
-            <div class="skill1">
-              <span
-                style="
-                  display: block;
-                  width: 60%;
-                  height: 30px;
-                  background-color: rgb(168, 44, 35);
-                  padding: 5px;
-                "
-                >60%</span
-              >
-            </div>
-            <h4>Angular</h4>
-          </div>
-
-          <div
-            style="
-              display: flex;
-              align-items: center;
-              justify-content: space-between;
-              margin: 30px 15px;
-            "
-          >
-            <div class="skill1">
-              <span
-                style="
-                  display: block;
-                  width: 60%;
-                  height: 30px;
-                  background-color: rgb(219, 233, 24);
-                  padding: 5px;
-                "
-                >60%</span
-              >
-            </div>
-            <h4>ReactJs</h4>
-          </div>
+        <div>
+            <img src="/public/img/elements/mongo_db_logo.png" alt="Mongo DB">
+            <h4>MongoDB</h4>
         </div>
-      </section>
-      <section class="section-main-2 bf">
-        <p>
-          Je suis ravi de vous présenter mon profil de développeur web
-          FullStack. Au fil des heures passées à coder, j'ai acquis une large
-          palette de compétences avec des bases solides qui me permettent de
-          prendre en charge de nombreux projets avec une grande confiance. Je
-          suis déterminé à réussir dans tout ce que je fais, car comme le
-          célèbre personnage de Naruto Uzumaki l'a si bien dit : "Le travail
-          acharné paie toujours. Ce n'est pas une question de talent, c'est une
-          question de persévérance." Avec ma passion pour le développement web
-          et mon engagement à travailler dur, je suis un atout inestimable pour
-          toute équipe de développement web.
-        </p>
-        <div style="color: white">
-          <a
-            target="_blank"
-            class="downlo"
-            style="position: relative; top: 0; left: 0"
-            href="../public/img/CV-abdel-samade-bouderga.pdf"
-            >téléchargez mon CV</a
-          >
-          <div class="divReseaux">
-            <a
-              target="_blank"
-              href="https://www.linkedin.com/in/abdel-samade-bouderga-b814a2248/"
-              ><i class="fa-brands fa-linkedin"></i
-            ></a>
-            <a target="_blank" href="https://github.com/apsamade"
-              ><i class="fa-brands fa-github"></i
-            ></a>
-            <a target="_blank" href="https://www.instagram.com/apsamade78/"
-              ><i class="fa-brands fa-instagram"></i
-            ></a>
-          </div>
+    </section>
+
+    <section class="presentation">
+        <img src="/public/img/elements/photo_presentation_3.jpg" alt="photo de abdel-samade bouderga">
+        <div>
+            <h3>
+                Qui suis-je ?
+            </h3>
+            <p>
+                Abdel-Samade Bouderga, 21 ans, développeur web spécialisé en Node.js et MongoDB, je privilégies la concision et la clarté. Ma maîtrise technique, notamment de Node.js et MongoDB, se conjugue à ma jeunesse, détermination, et orientation vers des solutions fonctionnelles.
+            </p>
+            <p>
+                Ayant toujours été passionné par le codage et le développement, je me suis orienté vers une formation de développeur web chez WF3 pour vivre de ma passion. J'ai obtenu mon BAC +2 RNCP en 2023 et suis désormais officiellement développeur web.
+            </p>
+            <p>
+                Mes objectifs à court terme incluent la réalisation d'une quinzaine de projets et l'intégration au sein d'une équipe pour mettre pleinement à profit mes compétences. À plus long terme, ma vision s'étend vers la gestion de plusieurs sites web, avec pour objectif principal la génération continue de revenus.
+            </p>
+            <a target="_blank" href="/public/img/cv/Bouderga Abdel-samade (4).pdf">Mon CV</a>
         </div>
-      </section>
+    </section>
+
+    <h2 class="titre-service">Mes Services</h2>
+    <section class="services">
+        <div style="background-image: url(/public/img/elements/site_e_commerce.jpg);"><h3>Site E-commerce</h3></div>
+        <div style="background-image: url(/public/img/elements/site_vitrine.jpg)"><h3>Site Vitrine</h3></div>
+        <div style="background-image: url(/public/img/elements/blog.jpg)" class="grand"><h3>Blog</h3></div>
+        <div style="background-image: url(/public/img/elements/site_booking.jpg);"><h3>Site de réservation</h3></div>
+        <div style="background-image: url(/public/img/elements/site_crowfunding.jpg);"><h3>Site de crowdfunding</h3></div>
+    </section>
+    <section class="skills">
+        <h2>Mes Compétences</h2>
+        <div class="infos">
+            <div class="front">
+                <h3>Front-End</h3>
+                <ul>
+                    <li>Html</li>
+                    <li>Css</li>
+                    <li>JavaScript</li>
+                    <li>Ejs</li>
+                    <li>ReactJs</li>
+                    <li>Angular</li>
+                </ul>
+            </div>
+            <div class="back">
+                <h3>Back-End</h3>
+                <ul>
+                    <li>NodeJs</li>
+                    <li>Mongo DB</li>
+                    <li>PHP</li>
+                    <li>Laravel</li>
+                    <li>Symfony</li>
+                    <li>MySQL</li>
+                </ul>
+            </div>
+        </div>
+        <script src="/public/js/skills.js"></script>
+    </section>
+    <main>
+        <h2>Mon Portfolio</h2>
+        <section class="portfolio">
+            <div class="projets">
+                <% projets.forEach(projet =>{ %>
+                    <a target="_blank" href="<%= projet.link %>">
+                        <div class="projet">
+                            <img src="<%= projet.image %>" alt="<%= projet.name %>">
+                            <h4><%= projet.name %></h4>
+                        </div>
+                    </a>
+                <% }) %>
+            </div>
+        </section>
     </main>
-    <section id="petiteInfo">
-      <div>
-        <h4>56</h4>
-        <span>Nuit blanches</span>
-      </div>
-      <div>
-        <h4 title="plus ou moins">25 000</h4>
-        <span>Lignes de code</span>
-
-        <!-- plus ou moins -->
-      </div>
-      <div>
-        <h4>17</h4>
-        <span>Projets</span>
-      </div>
-      <div>
-        <h4>32</h4>
-        <span
-          title="Le niveaux max existe pas mais le niveaux d'un développeur senior est de 5000 je dirais"
-          >Niveaux</span
-        >
-
-        <!-- Le niveaux max existe pas mais le niveaux d'un développeur senior est de 5000 je dirais -->
-      </div>
-    </section>
-    <section id="portfolio">
-      <h2>Portfolio</h2>
-      <hr />
-      <div>
-        <a target="_blank" href="https://ml-prestige.com/location"
-          ><img
-            class="bf"
-            title="site complet pour une agence de location de voiture"
-            src="../public/img/Capture d'écran 2023-08-21 152238.png"
-            alt="photo de ma réalisation"
-        /></a>
-        <a target="_blank" href="https://mifizi.onrender.com/"
-          ><img
-            class="bf"
-            title="site mifiz en construction"
-            src="../public/img/mifizi.png"
-            alt="photo de ma réalisation"
-        /></a>
-        <a target="_blank" href="../public/img/formulaire-league.png"
-          ><img
-            class="bf"
-            title="C'est principalement du front donc je n'ai que des images et du code"
-            src="../public/img/formulaire-league.png"
-            alt="photo de ma réalisation"
-        /></a>
-        <a target="_blank" href="../public/img/nikeScreen.png"
-          ><img
-            class="bf"
-            title="C'est principalement du front donc je n'ai que des images et du code"
-            src="../public/img/nikeScreen.png"
-            alt="photo de ma réalisation"
-        /></a>
-        <a target="_blank" href="../public/img/prototype-1.png"
-          ><img
-            class="bf"
-            title="C'est principalement du front donc je n'ai que des images et du code"
-            src="../public/img/prototype-1.png"
-            alt="photo de ma réalisation"
-        /></a>
-        <a target="_blank" href="https://mel-coiffure.onrender.com/"
-          ><img
-            class="bf"
-            title="C'est principalement du front donc je n'ai que des images et du code"
-            src="../public/img/mel-coiffure.png"
-            alt="photo de ma réalisation"
-        /></a>
-      </div>
-    </section>
-    <section id="contact">
-      <h2>Contact</h2>
-      <hr />
-      <form action="/" method="POST">
-        <input type="text" name="name" id="name" placeholder="Prénom" />
-        <input type="email" name="email" id="email" placeholder="Email" />
-        <br />
-        <br />
-        <textarea name="message" id="message" placeholder="Message"></textarea>
-        <input type="submit" value="Envoyer" />
-      </form>
-    </section>
-    <footer>
-      <div>
-        <a
-          target="_blank"
-          href="https://www.linkedin.com/in/abdel-samade-bouderga-b814a2248/"
-          ><i class="fa-brands fa-linkedin"></i
-        ></a>
-        <a target="_blank" href="https://github.com/apsamade"
-          ><i class="fa-brands fa-github"></i
-        ></a>
-        <a target="_blank" href="https://www.instagram.com/apsamade78/"
-          ><i class="fa-brands fa-instagram"></i
-        ></a>
-      </div>
-      <h4>© Copyright 2023 - Abdel-samade Bouderga. Tous droits réservés.</h4>
-    </footer>
-    <script src="../public/js/navBurger.js"></script>
-    <script
-      src="https://kit.fontawesome.com/3247d6a24f.js"
-      crossorigin="anonymous"
-    ></script>
-    <script src="../public/js/navST.js"></script>
-  </body>
+    <%- include('partials/footer') %>
+</body>
 </html>

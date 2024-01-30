@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio Bouderga | Inscription</title>
+    <link rel="stylesheet" href="/public/css/style.css">
+    <link rel="stylesheet" href="/public/css/login.css">
+    <link rel="shortcut icon" href="/public/img/logo/solo_ab_logo.png" type="image/x-icon">
+</head>
+<body>
+    <%- include('../partials/nav') %>
+    <main>
+        <header>
+            <h1>S'inscrire</h1>
+            <form method="POST">
+                <input type="email" name="email" id="email" placeholder="Email" required>
+                <input type="password" name="mdp" id="mdp" placeholder="Mot de passe" required>
+                <input type="password" name="mdpv" id="mdpv" placeholder="Mot de passe de confirmation" required>
+                <input type="submit" value="S'inscrire">
+                <% if(typeof error != 'undefined'){ %>
+                    <div class="error">
+                        <%= error %>
+                    </div>
+                <% } %>
+            </form>
+            <a href="/connexion">Se Connecter</a>
+        </header>
+        <section class="bckg">
+
+        </section>        
+    </main>
+</body>
+</html>

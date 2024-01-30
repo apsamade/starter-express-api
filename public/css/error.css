@@ -1,0 +1,42 @@
+header{
+    position: relative;
+    background-image: url(/public/img/background/background_pink_porsch_pink.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: bottom;
+    min-height: 100vh;
+    padding-top: 10.2vh;
+}
+header::before{
+    content: '';
+    background-color: rgba(0, 0, 0, 0);
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+header h1{
+    text-transform: capitalize;
+    font-family: 'Lexend', sans-serif;
+    letter-spacing: -2px;
+    font-weight: bold;
+    color: rgb(0, 0, 0);
+    position: relative;
+    z-index: 1;
+    font-size: 4rem;
+    margin: 0px 25px 0 6%;
+    padding: 50px 0 0;
+}
+@media screen and (max-width: 1100px) {
+    header{
+        padding-top: 4vh;
+    }
+    header h1{
+        font-size: 2.2rem;
+        width: 90%;
+        text-align: center;
+        margin: auto;
+        padding: 50px 0 0;
+    }
+}

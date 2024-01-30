@@ -1,0 +1,558 @@
+header{
+    background-image: url(/public/img/background/background_header_sky.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: bottom;
+    min-height: 80vh;
+    padding-top: 10.2vh;
+}
+header h1{
+    text-transform: capitalize;
+    font-family: 'Lexend', sans-serif;
+    letter-spacing: -2px;
+    font-weight: bold;
+    color: rgb(0, 0, 0);
+    color: white;
+    font-size: 4rem;
+    margin: 0px 25px 0 6%;
+    padding: 50px 0 0;
+}
+header p{
+    margin: 25px 25px 25px 6%;
+    color: white;
+    font-family: 'lexend', sans-serif;
+    font-size: 1.2rem;
+    width: 50%;
+    max-width: 650px;
+    min-width: 325px;
+    line-height: 150%;
+}
+header a{
+    margin: 25px 25px 25px 6%;
+    color: white;
+    font-family: 'lexend', sans-serif;
+    font-size: 1.4rem;
+    width: 50%;
+    max-width: 630px;
+    min-width: 325px;
+    background-color: rgb(99, 149, 255);
+    text-decoration: none;
+    padding: 12px;
+    border-radius: 4px;
+    box-shadow: 0 0 3px 0 rgba(0, 0, 0, 0.4);
+    cursor: pointer;
+    display: block;
+    text-align: center;
+    transition: background-color 0.3s;
+}
+header a:hover{
+    background-color: rgb(57, 113, 235);
+}
+header img{
+    position: absolute;
+    right: 18vw;
+    top: 26vh;
+    width: 25vw;
+    display: block;
+    animation: iddle 3s infinite ease;
+}
+.stacks{
+    width: 90%;
+    margin: 50px auto 15px;
+    padding: 8px;
+    border-radius: 8px;
+    box-shadow: 0 0 12px 3px rgb(57, 119, 235);
+    background-color: rgb(73, 75, 90);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    animation: shine 3s infinite ease;
+}
+.stacks div{
+    flex-grow: 1;
+    flex-basis: 125px;
+    padding: 12px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    border-left: 2px solid gray;
+    transition: transform 0.3s;
+}
+.stacks div:hover{
+    transform: scale(1.1);
+}
+.stacks div:nth-child(1){
+    border-left: 0 solid gray;
+}
+.stacks div img{
+    width: 100px;
+}
+.stacks div h4{
+    font-size: 1.3rem;
+}
+.presentation{
+    display: flex;
+    width: 70%;
+    max-width: 1500px;
+    margin: 150px auto 100px;
+    flex-wrap: wrap;
+    align-items: end;
+    justify-content: space-between;
+}
+.presentation img{
+    height: 450px;
+    margin: 15px;
+    display: block;
+    border-radius: 4px;
+}
+.presentation div{
+    margin: 15px;
+    width: 60%;
+    min-height: 450px;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+}
+.presentation div h3{
+    font-size: 2rem;
+    color: rgb(0, 102, 255);
+    width: 100%;
+    margin: auto;
+}
+.presentation div p{
+    margin: 15px auto;
+    line-height: 150%;
+    width: 100%;
+    text-align: justify;
+}
+.presentation div a{
+    margin: 25px auto 0;
+    color: white;
+    font-family: 'lexend', sans-serif;
+    font-size: 1.4rem;
+    width: 100%;
+    min-width: 325px;
+    background-color: rgb(99, 149, 255);
+    text-decoration: none;
+    padding: 12px;
+    border-radius: 4px;
+    box-shadow: 0 0 3px 0 rgba(0, 0, 0, 0.4);
+    cursor: pointer;
+    display: block;
+    text-align: center;
+    transition: background-color 0.3s;
+}
+.presentation div a:hover{
+    background-color: rgb(57, 113, 235);
+}
+.titre-service{
+    font-size: 2.5rem;
+    margin: 50px auto 50px;
+    padding-top: 100px;
+    text-align: center;
+}
+.services{
+    display: flex;
+    align-items: start;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 70%;
+    margin: 15px auto;
+}
+.services div{
+    flex-grow: 1;
+    flex-basis: 35%;
+    min-width: 325px;
+    min-height: 350px;
+    margin: 15px;
+    padding: 8px;
+    border-radius: 4px;
+    background-color: rgb(61, 106, 252);
+    background-size: cover;
+    box-shadow: 0 0 3px 0 rgba(0, 0, 0, 0.4);
+    position: relative;
+    z-index: 1;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+.services div::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: -1;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.3);
+    transition: background-color 0.3s;
+}
+.services div:nth-child(1):hover::before{
+    content: 'Optimisez votre activité en ligne avec un service E-commerce sur mesure. Créez un site captivant, une navigation fluide, et des performances maximales pour vous démarquer en solo. Transformez les visiteurs en clients avec un site conçu pour convertir.';
+}
+.services div:nth-child(2):hover::before{
+    content: 'Facilitez vos réservations avec notre service de création de site de réservation. Choisissez un design convivial, une interface intuitive, et des fonctionnalités de réservation efficaces. En solo, démarquez-vous avec un site professionnel qui simplifie le processus de réservation pour vos clients.';
+}
+.services div:nth-child(3):hover::before{
+    content: 'Établissez votre présence en ligne avec notre service de création de blog. Optez pour un design épuré, une interface utilisateur conviviale, et des fonctionnalités avancées pour mettre en avant votre contenu. En solo, démarquez-vous avec un blog professionnel qui captive les lecteurs et reflète votre voix unique.';
+}
+.services div:nth-child(4):hover::before{
+    content: 'Facilitez vos réservations avec notre service de création de site de réservation. Choisissez un design convivial, une interface intuitive, et des fonctionnalités de réservation efficaces. En solo, démarquez-vous avec un site professionnel qui simplifie le processus de réservation pour vos clients.';
+}
+.services div:nth-child(5):hover::before{
+    content: 'Lancez votre projet avec notre service de création de site de crowdfunding. Adoptez un design accrocheur, une interface utilisateur intuitive, et des fonctionnalités de financement participatif efficaces. En solo, démarquez-vous avec un site de crowdfunding professionnel qui attire les contributeurs et fait décoller votre campagne.';
+}
+.services div:hover::before{
+    background-color: rgba(0, 0, 0, 0.8);
+    color: white;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.services h3{
+    color: white;
+    text-shadow: 1px 1px 1px black;
+}
+.services div:hover{
+    box-shadow: 0 0 6px 0 rgba(0, 0, 0, 0.8);
+    transform: scale(1.05);
+}
+.services .grand{
+    flex-basis: 100% !important;
+}
+
+/* skills  */
+
+.skills{
+    min-height: 60vh;
+    margin: 200px auto;
+    background-image: url(/public/img/background/background_skills.jpg);
+    background-size: cover;
+    background-position: left;
+    color: white;
+}
+.skills h2{
+    margin: 0 5%;
+    padding-top: 50px;
+    font-size: 2.5rem;
+}
+.skills .infos{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    width: 80%;
+    margin: 20px auto;
+    padding-bottom: 20px;
+}
+.skills .infos .front, .skills .infos .back{
+    flex-basis: 325px;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 10px;
+    opacity: 0;
+    transform: translateY(-15px);
+}
+.skills .infos h3{
+    margin: 15px 0;
+}
+.skills .infos ul{
+    list-style: inside;
+    margin: 15px;
+}
+.skills .infos ul li{
+    margin: 10px;
+    font-size: 18px;
+    padding: 12px;
+    min-width: 300px;
+    border-radius: 6px;
+    border: 2px solid white;
+    list-style: none;
+    position: relative;
+    text-shadow: 1px 1px 1px black;
+    z-index: 1;
+}
+.skills .infos ul li::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 100%;
+    bottom: 0;
+    background-color: black;
+    z-index: -1;
+    transition: right 1s, background-color 0.3s;
+}
+
+/* skills js */
+.skillsFront-1::before{
+    background-color: rgb(175, 49, 49) !important;
+    right: 10% !important;
+}
+.skillsFront-2::before{
+    background-color: rgb(49, 79, 175) !important;
+    right: 20% !important;
+}
+.skillsFront-3::before{
+    background-color: rgb(224, 204, 24) !important;
+    right: 30% !important;
+}
+.skillsFront-4::before{
+    background-color: rgb(167, 216, 54) !important;
+    right: 10% !important;
+}
+.skillsFront-5::before{
+    background-color: rgb(209, 212, 31) !important;
+    right: 35% !important;
+}
+.skillsFront-6::before{
+    background-color: rgb(175, 49, 49) !important;
+    right: 35% !important;
+}
+
+.skillsBack-1::before{
+    background-color: rgb(226, 204, 8) !important;
+    right: 10% !important;
+}
+.skillsBack-2::before{
+    background-color: rgb(9, 139, 9) !important;
+    right: 10% !important;
+}
+.skillsBack-3::before{
+    background-color: rgb(49, 79, 175) !important;
+    right: 40% !important;
+}
+.skillsBack-4::before{
+    background-color: rgb(49, 79, 175) !important;
+    right: 60% !important;
+}
+.skillsBack-5::before{
+    background-color: rgb(49, 79, 175) !important;
+    right: 30% !important;
+}
+.skillsBack-6::before{
+    background-color: rgb(255, 153, 0) !important;
+    right: 40% !important;
+}
+
+.apparition-1{
+    animation: apparition 0.5s 0.5s ease forwards;
+}
+.apparition-2{
+    animation: apparition 0.5s 0.75s ease forwards;
+}
+/* portfolio */
+main h2{
+    text-align: center;
+    font-size: 2.5rem;
+}
+.projets{
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(325px, 1fr));
+    grid-template-rows: repeat(auto-fill, minmax(300px, 1fr));
+    margin: 15px auto;
+    width: 60%;
+    min-width: 340px;
+    background-color: #b4cfe4;
+    border-radius: 6px;
+    padding: 15px 0;
+    box-shadow: 0 0 3px 0 rgba(0, 0, 0, 0.4);
+}
+main a{
+    width: calc(95%);
+    margin: 10px auto;
+    padding: 12px;
+    border-radius: 6px;
+    box-shadow: 0 0 3px 0 rgba(0, 0, 0, 0.4);
+    background-color: #ffffff;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+main a:hover{
+    transform: scale(1.03);
+    box-shadow: 2px 2px 8px 3px rgba(0, 0, 0, 0.5);
+}
+main .projet{
+    height: 300px;
+    display: flex;
+    flex-direction: column;    
+    justify-content: space-between;
+}
+main .projet img{
+    width: 100%;
+    display: block;
+    max-height: 300px;
+    object-fit: cover;
+    border-radius: 6px;
+    border: 2px solid white;
+}
+main a{
+    text-decoration: none;     
+}
+main .projet h4{
+    margin: 15px;
+    text-align: center;  
+}
+@media screen and (max-width: 1850px){
+    .presentation{
+        width: 90%;
+    }
+    .services{
+        width: 90%;
+    }
+}
+@media screen and (max-width: 1700px){
+    header img{
+        right: 15vw;
+    }
+    .presentation div p{
+        margin: 15px auto;
+        line-height: 150%;
+        width: 90%;
+    }
+    .presentation div a{
+        margin: 15px auto;
+        width: 90%;
+    }
+    .presentation div h3{
+        text-align: center;
+    }
+    .projets{
+        width: 80%;
+    }
+}
+@media screen and (max-width: 1500px){
+    header img{
+        right: 15vw;
+    }
+    .presentation div p{
+        margin: 15px auto;
+        line-height: 150%;
+        width: 90%;
+    }
+    .presentation div h3{
+        text-align: center;
+    }
+    .presentation div{
+        width: 45%;
+    }
+}
+@media screen and (max-width: 1300px){
+    header img{
+        right: 10vw;
+        top: 30vh;
+    }
+    header h1{
+        font-size: 3.2rem;
+    }
+}
+@media screen and (max-width: 1100px) {
+    header{
+        padding-top: 4vh;
+    }
+    header h1{
+        font-size: 2.2rem;
+        width: 90%;
+        text-align: center;
+        margin: auto;
+        padding: 50px 0 0;
+    }
+    header p{
+        text-align: justify;
+        margin: 30px auto;
+        width: 60%;
+    }
+    header a{
+        margin: 40px auto;
+        width: 60%;
+    }
+    header img{
+        display: none;
+    }
+    .presentation{
+        width: 90%;
+    }
+    .presentation img{
+        margin: 15px auto;
+    }
+    .presentation div{
+        width: 100%;
+        height: auto;
+    }
+    .presentation div p{
+        width: 90%;
+        text-align: justify;
+    }
+    .presentation div h3{
+        width: 90%;
+        text-align: center;
+    }
+    .presentation div a{
+        width: calc(90%);
+        min-width: 0;
+    }
+    .services{
+        width: 90%;
+    }
+    .skills h2{
+        font-size: 2.2rem;
+    }
+}
+@media screen and (max-width: 600px){
+    .stacks div{
+        border-left: 0 solid gray;
+    }
+    header{
+        padding-bottom: 4vh;
+    }
+    .presentation img{
+        flex-basis: 50%;
+        height: auto;
+        width: 100%;
+    }
+    .services{
+        width: 100%;
+    }
+    .projets{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .projets a{
+        flex-grow: 1;
+        flex-basis: 100%;
+    }
+}
+@keyframes shine{
+    0%{
+        box-shadow: 0 0 8px 8px rgba(57, 119, 235, 0.7);
+    }
+    50%{
+        box-shadow: 0 0 8px 8px rgba(57, 119, 235, 1);
+    }
+    100%{
+        box-shadow: 0 0 8px 8px rgba(57, 119, 235, 0.7);
+    }
+}
+@keyframes iddle{
+    0%{
+        transform: translateY(0);
+    }
+    50%{
+        transform: translateY(-25px);
+    }
+    100%{
+        transform: translateY(0);
+    }
+}
+@keyframes apparition{
+    100%{
+        opacity: 1;
+        transform: none;
+    }
+}

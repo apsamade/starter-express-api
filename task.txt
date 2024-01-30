@@ -1,0 +1,2 @@
+- refaire cv v2 sans adresse et le nouveau lien du portfolio
+- heberger le site sur le ionos a karim

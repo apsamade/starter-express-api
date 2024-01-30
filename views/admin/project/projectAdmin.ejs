@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio Bouderga | Compte</title>
+    <link rel="stylesheet" href="/public/css/style.css">
+    <link rel="stylesheet" href="/public/css/adminPortfolio.css">
+    <link rel="shortcut icon" href="/public/img/logo/solo_ab_logo.png" type="image/x-icon">
+</head>
+<body>
+    <% if(user){ %>
+        <% if(user.admin){ %>
+            <%- include('../../partials/navAdmin') %>
+        <% }else{ %>
+            <%- include('../../partials/navUser') %>
+        <% } %>
+    <% }else{ %>
+        <%- include('../../partials/nav') %>
+    <% } %>
+    <h1>Projets</h1>
+    <section class="projets">
+        <% projets.forEach(projet => { %>
+            <div class="projet">
+                <img src="<%= projet.image %>" alt="<%= projet.name %>">
+                <h4><%= projet.name %></h4>
+                <p>Lien : <%= projet.link %></p>
+                <div class="modif">
+                    <a href="/admin/portfolio/modif-projet/<%= projet._id %>">Modifier</a>
+                    <a href="/admin/portfolio/delete-projet/<%= projet._id %>">Supprimer</a>
+                </div>
+            </div>
+        <% }); %>
+    </section>
+</body>
+</html>
