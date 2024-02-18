@@ -10,6 +10,7 @@ header{
     background-image: url(/public/img/background/background_home.png);
     background-size: cover;
     background-repeat: no-repeat;
+    padding: 125px 0;
 }
 header h1{
     text-transform: capitalize;
@@ -63,7 +64,7 @@ header img{
 }
 .stacks{
     width: 90%;
-    margin: 50px auto 15px;
+    margin: 0 auto 15px;
     padding: 8px;
     border-radius: 8px;
     box-shadow: 0 0 12px 3px rgb(57, 119, 235);
@@ -233,7 +234,7 @@ header img{
 
 .skills{
     min-height: 60vh;
-    margin: 200px auto;
+    margin: 0 auto;
     background-image: url(/public/img/background/background_skills.jpg);
     background-size: cover;
     background-position: left;
