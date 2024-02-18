@@ -6,6 +6,11 @@ header{
     min-height: 80vh;
     padding-top: 10.2vh;
 }
+.background{
+    background-image: url(/public/img/background/background_home.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
 header h1{
     text-transform: capitalize;
     font-family: 'Lexend', sans-serif;
