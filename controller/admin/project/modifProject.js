@@ -65,7 +65,7 @@ exports.postModifProject = async (req, res, next) => {
         }
         if (user && user.admin && (req.files || name || link)) {
             const project = await Project.findById(projectId)
-            return res.render('admin/project/modifProject', { user, project, message: 'Produit modifié avec succès !'})
+            return res.render('admin/project/modifProject', { user, project, message: 'Project modifié avec succès !'})
         } else {
             res.redirect('/')
         }
