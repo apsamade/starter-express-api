@@ -8,7 +8,7 @@ header{
 }
 .background{
     background-image: url(/public/img/background/background_home.png);
-    background-size: cover;
+    background-size: 100% 100%;
     background-repeat: no-repeat;
     padding: 125px 0;
 }
@@ -236,7 +236,7 @@ header img{
     min-height: 60vh;
     margin: 0 auto;
     background-image: url(/public/img/background/background_skills.jpg);
-    background-size: 100% 100%;
+    background-size: cover;
     background-position: left;
     color: white;
 }
@@ -479,6 +479,18 @@ main .projet h4{
     }
     header img{
         display: none;
+    }
+    .background{
+        background-image: none;
+    }
+    .titre-service {
+        font-size: 2.5rem;
+        margin: 50px auto 50px;
+        padding-top: 0;
+        text-align: center;
+    }
+    .presentation {
+        margin: 150px auto 50px;
     }
     .presentation{
         width: 90%;
