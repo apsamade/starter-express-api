@@ -11,16 +11,16 @@
 }
 
 ::-webkit-scrollbar-track {
-    background: #090e3d5b; /* Couleur de fond de la piste de défilement */
+    background: #7d89ff96; /* Couleur de fond de la piste de défilement */
 }
 
 ::-webkit-scrollbar-thumb {
-    background: #3e71fd;
+    background: #0051ff;
     border-radius: 6px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-    background: #0051ff; /* Couleur de la poignée de défilement au survol */
+    background: #3e71fd; /* Couleur de la poignée de défilement au survol */
 }
 html {
     scroll-behavior: smooth;
