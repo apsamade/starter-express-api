@@ -251,6 +251,7 @@ header img{
     justify-content: space-around;
     flex-wrap: wrap;
     width: 80%;
+    min-width: fit-content;
     margin: 20px auto;
     padding-bottom: 20px;
 }
